@@ -15,7 +15,7 @@ body {
   align-items: flex-start;
   height: 100vh;
   margin: 0;
-  padding-top: 20px; /* Ajuste o espaçamento superior se necessário */
+  padding-top: 20px;
 }
 
 main {
@@ -23,21 +23,11 @@ main {
   width: 100%;
 }
 
-@media (min-width: 600px) {
-  main {
-      flex-wrap: nowrap;
-  }
-
-  .colc {
-      flex-basis: 33%;
-  }
-}
-
 h1 {
   font-family: caviar;
   color: rgb(231, 185, 124);
   margin: 0;
-  padding-bottom: 20px; /* Ajuste o espaçamento inferior se necessário */
+  padding-bottom: 20px;
 }
 
 a {
@@ -53,8 +43,8 @@ a {
 }
 
 .thumbnail {
-  width: 300px; /* Ajuste o tamanho conforme necessário */
-  height: 150px; /* Ajuste o tamanho conforme necessário */
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid #ddd;
@@ -128,4 +118,57 @@ a {
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
+}
+
+/* Media queries para dispositivos móveis */
+@media (max-width: 600px) {
+  body {
+      padding-top: 10px;
+  }
+
+  h1 {
+      font-size: 1.5em;
+  }
+
+  .thumbnail {
+      width: 90px;
+      height: 90px;
+  }
+
+  .close, .prev, .next, .download {
+      font-size: 24px;
+      padding: 12px;
+  }
+
+  .prev, .next {
+      padding: 10px;
+  }
+
+  .download {
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+      font-size: 1.2em;
+  }
+
+  .thumbnail {
+      width: 80px;
+      height: 80px;
+  }
+
+  .close, .prev, .next, .download {
+      font-size: 20px;
+      padding: 8px;
+  }
+
+  .prev, .next {
+      padding: 8px;
+  }
+
+  .download {
+      padding: 6px 12px;
+  }
 }
